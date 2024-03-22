@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import Logo from "../components/logo.astro";
 
 const navItems: Array<NavItem> = [
   { title: "Features", url: "#features" },
@@ -14,10 +15,9 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+  <a class="flex items-center gap-3 hover:!text-default text-sm" href="#">
+    <Logo src = "/favicon.png", alt = "Sci-Fi Logo", width = "50", height = "10" />
+    <h1>Sci-Fi Campaign</h1>
   </a>
   <div>
     <div class="flex items-center gap-6">

@@ -1,0 +1,20 @@
+---
+// This is the frontmatter section of your Astro component
+// Import the Image component if you plan to use Astro's Image component for optimization
+import { Image } from "astro:assets";
+// Define the path to your logo image or pass it as a prop
+const { src = "/favicon.png", alt = "Sci-Fi Logo", width = "275", height = "40" } = Astro.props;
+const sizes = "50vw";
+---
+
+<div class="logo">
+    <Image src={src} alt={alt} width={width} height={height} sizes = {sizes} />
+</div>
+
+<style>
+    .logo {
+        /* Your styles here */
+        width: auto; /* Example: overrides width to maintain aspect ratio */
+        height: auto; /* Adjust height automatically */
+    }
+</style>
