@@ -1,11 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/cjm1040/Documents/GitHub/wiki",
     "paths": {
       "~/*": [
         "src/*"
       ]
-    }
+    },
+    "jsx": "preserve"
   }
 }
