@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import astronautImage from "~/assets/planet.png";
+import astronautImage from "../assets/planet.png";
 import Logo from "../components/Logo.astro";
-import HeroImage from "~/components/hero-image.astro";
-import Starfield from "~/components/starfield.astro";
+import HeroImage from "../components/hero-image.astro";
+import Starfield from "../components/starfield.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -12,6 +12,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 <section class="relative h-full bg-black">
   <Starfield />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+  
     <HeroImage />
   </div>
   <div class="relative grid h-full place-items-center sm:grid-cols-2">
@@ -31,14 +32,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       id="planet"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
-      <Image
-        class="h-full w-full object-cover"
-        src={astronautImage}
-        widths={widths}
-        sizes={sizes}
-        loading="eager"
-        alt="A floating red planet"
-      />
     </div>
   </div>
 </section>
