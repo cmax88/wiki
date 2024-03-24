@@ -1,18 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import astronautImage from "../assets/planet.png";
 import Logo from "../components/Logo.astro";
 import HeroImage from "../components/hero-image.astro";
 import Starfield from "../components/starfield.astro";
-
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
+<head>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    model-viewer{
+        width:35vw;
+        height:35vw;
+        margin: 0 auto;
 
+    }
+</style>
+</head>
 <section class="relative h-full bg-black">
   <Starfield />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-  
     <HeroImage />
   </div>
   <div class="relative grid h-full place-items-center sm:grid-cols-2">
@@ -28,10 +34,16 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         <br /> wiki.
       </div>
     </h2>
-    <div
-      id="planet"
-      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
-    >
+    <div id="planet">
+      <model-viewer src="/models/planet.glb" camera-controls auto-rotate environmental-image="" tone-mapping="commerce" exposure=".3">
+        <button class="Hotspot" slot="hotspot-2" data-position="0.08618413902918752m 0.06404339972843363m -0.4777938536878112m" data-normal="0.16930102242129336m 0.13423766742060586m -0.9763797480758087m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+          </div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
     </div>
   </div>
 </section>
