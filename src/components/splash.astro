@@ -9,11 +9,11 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <style>
     model-viewer{
-        width:35vw;
-        height:35vw;
-        margin: 0 auto;
-
+      width: 40vw;
+      height: 40vw;
+      margin: 0 auto;
     }
+
 </style>
 </head>
 <section class="relative h-full bg-black">
@@ -35,7 +35,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       </div>
     </h2>
     <div id="planet">
-      <model-viewer src="/models/planet.glb" camera-controls auto-rotate environmental-image="" tone-mapping="commerce" exposure=".3">
+      <model-viewer src="/models/planet.glb" camera-controls auto-rotate disable-zoom environmental-image="/models/cobblestone_street_night_4k.hdr" tone-mapping="commerce" exposure=".3">
         <button class="Hotspot" slot="hotspot-2" data-position="0.08618413902918752m 0.06404339972843363m -0.4777938536878112m" data-normal="0.16930102242129336m 0.13423766742060586m -0.9763797480758087m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">
           </div>

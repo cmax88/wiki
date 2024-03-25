@@ -14,13 +14,17 @@ const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
 
 <a class="group aspect-video hover:!text-default" href={site.data.url}>
   <figure class="relative h-full w-full overflow-hidden">
-    <Image
-      class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
-      src={site.data.image}
-      widths={widths}
-      sizes={sizes}
-      alt={`A screenshot of ${site.data.url}`}
-    />
+    <div id="planet">
+      <model-viewer src="/models/planet.glb" camera-controls auto-rotate disable-zoom environmental-image="/models/cobblestone_street_night_4k.hdr" tone-mapping="commerce" exposure=".3">
+        <button class="Hotspot" slot="hotspot-2" data-position="0.08618413902918752m 0.06404339972843363m -0.4777938536878112m" data-normal="0.16930102242129336m 0.13423766742060586m -0.9763797480758087m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+          </div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+    </div>
     <figcaption class="absolute inset-0">
       <div
         class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100"
